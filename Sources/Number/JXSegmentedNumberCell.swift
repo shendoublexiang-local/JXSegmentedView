@@ -42,7 +42,8 @@ open class JXSegmentedNumberCell: JXSegmentedTitleCell {
         }
 
         numberLabel.backgroundColor = myItemModel.numberBackgroundColor
-        numberLabel.textColor = myItemModel.numberTextColor
+        let textColor = myItemModel.isSelected ? myItemModel.numberTextSelectedColor : myItemModel.numberTextColor
+        numberLabel.textColor = textColor
         numberLabel.text = myItemModel.numberString
         numberLabel.font = myItemModel.numberFont
         numberLabel.isHidden = myItemModel.number == 0

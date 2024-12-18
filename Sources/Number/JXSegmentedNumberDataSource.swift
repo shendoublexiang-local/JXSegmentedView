@@ -18,6 +18,8 @@ open class JXSegmentedNumberDataSource: JXSegmentedTitleDataSource {
     open var numberBackgroundColor: UIColor = .red
     /// numberLabel的textColor
     open var numberTextColor: UIColor = .white
+    /// numberLabel的选中的颜色
+    open var numberTextSelectedColor: UIColor = .black
     /// numberLabel的font
     open var numberFont: UIFont = UIFont.systemFont(ofSize: 11)
     /// numberLabel的默认位置是center在titleLabel的右上角，可以通过numberOffset控制X、Y轴的偏移
@@ -45,6 +47,7 @@ open class JXSegmentedNumberDataSource: JXSegmentedTitleDataSource {
             itemModel.numberString = "\(itemModel.number)"
         }
         itemModel.numberTextColor = numberTextColor
+        itemModel.numberTextSelectedColor = numberTextSelectedColor
         itemModel.numberBackgroundColor = numberBackgroundColor
         itemModel.numberOffset = numberOffset
         itemModel.numberWidthIncrement = numberWidthIncrement
